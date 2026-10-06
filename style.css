@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background:
+        radial-gradient(circle at 50% 0%, #22252d 0%, #101114 35%, #090a0c 100%);
+    color: #f5f5f5;
+    min-height: 100vh;
+}
+
+
+/* NAVBAR */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(10, 11, 13, 0.75);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    color: black;
+
+    border-radius: 11px;
+
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #a9abb2;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+
+/* HERO */
+
+.hero {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 110px 25px 70px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px;
+
+    color: #b7b9c0;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 75px);
+
+    letter-spacing: -4px;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #a8abb2;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.updated {
+    margin-top: 25px;
+
+    color: #6f7279;
+
+    font-size: 13px;
+}
+
+
+/* TERMS */
+
+.terms-container {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 20px 25px 100px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.terms-card {
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    gap: 15px;
+
+    padding: 32px;
+
+    background: rgba(255,255,255,0.035);
+
+    border: 1px solid rgba(255,255,255,0.075);
+
+    border-radius: 16px;
+
+    transition: 0.25s;
+}
+
+.terms-card:hover {
+    background: rgba(255,255,255,0.055);
+
+    border-color: rgba(255,255,255,0.12);
+
+    transform: translateY(-2px);
+}
+
+.section-number {
+    color: #60636a;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.terms-card h2 {
+    font-size: 20px;
+
+    margin-bottom: 14px;
+}
+
+.terms-card p {
+    color: #9da0a8;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+.terms-card ul {
+    margin-top: 15px;
+
+    padding-left: 20px;
+
+    color: #9da0a8;
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+.terms-card li::marker {
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid rgba(255,255,255,0.07);
+
+    background: #08090a;
+}
+
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 45px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #777a82;
+
+    font-size: 13px;
+}
+
+.footer-content strong {
+    color: white;
+
+    font-size: 16px;
+}
+
+.footer-content p {
+    margin-top: 7px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .terms-card {
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+    }
+
+    .section-number {
+        margin-bottom: -5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+}
